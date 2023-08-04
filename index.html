@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume365</title>
+    <style>
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: black;
+            padding: 10px;
+
+        }
+
+        /* Styles for the "Resume360" text on the left side */
+        .header__text {
+            font-family: Arial;
+
+            font-weight: bold;
+            color: white;
+            font-size: 28px;
+            text-decoration: none;
+        }
+
+        /* Styles for the button on the right side */
+        .header__button {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            /* Add this line to remove the underline */
+        }
+
+        /* Styles for the parent div */
+        .parent {
+            display: flex;
+            width: 100%;
+            background: linear-gradient(to right, black, purple);
+            /* Black gradient with purple */
+            color: white;
+            /* Text color for the child divs */
+        }
+
+        /* Styles for the left child div */
+        .left-div {
+            flex: 0 0 60%;
+            /* This will make it occupy 60% of the screen width */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Center the content vertically */
+            align-items: center;
+            /* Center the content horizontally */
+            margin: 20px 0;
+            /* Add margin from top and bottom */
+            padding: 10px;
+        }
+
+        /* Styles for the right child div */
+        .right-div {
+            flex: 0 0 40%;
+            /* This will make it occupy 40% of the screen width */
+            padding: 10px;
+        }
+
+        /* Styles for the resume image */
+        .resume-image {
+            max-width: 80%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid black;
+            /* Added "solid" and specified the color */
+            border-radius: 20px;
+        }
+
+        /* Styles for the three divs inside the left div */
+        .left-child-div {
+            margin-top: 20px;
+            color: white;
+            padding: 10px;
+        }
+
+        .left-child-div2 {
+            margin-top: 20px;
+            color: white;
+            padding: 10px;
+
+        }
+
+
+        /* Remove margin from the body element */
+        body {
+            margin: 0;
+            margin-right: 0;
+            background: linear-gradient(to right, black, purple);
+            /* Dark blue gradient */
+        }
+
+        button {
+            margin-right: 0;
+        }
+
+        /* Three divs with paallel */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(to right, black, purple);
+            /* Dark blue gradient */
+            padding: 20px;
+        }
+
+        .box {
+            flex: 1;
+            margin: 0 10px;
+            border: 1px solid whitesmoke;
+            /* Added "solid" and specified the color */
+            padding: 20px;
+            color: white;
+            border-radius: 20px;
+        }
+
+        .container2 {
+            display: flex;
+            justify-content: space-between;
+
+            padding: 20px;
+        }
+
+        .box2 {
+            flex: 1;
+            margin: 0 10px;
+
+            padding: 20px;
+
+        }
+
+        .box h2 {
+            display: flex;
+            align-items: center;
+            color: white;
+            /* Heading color */
+        }
+
+        .profile-image-box {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+
+        }
+
+        .profile-image-box2 {
+            width: 166px;
+            height: 177px;
+            margin-right: 10px;
+            border: 1px solid black;
+            /* Added "solid" and specified the color */
+            border-radius: 20px;
+
+        }
+
+        /*pricing section  */
+        * {
+            box-sizing: border-box;
+        }
+
+        .pricing {
+            /* Add the correct linear gradient background color */
+            background: linear-gradient(to right, black, purple);
+            color: white;
+            /* Remove the old conflicting background-color rule */
+        }
+
+        .columns {
+            float: left;
+            width: 35%;
+            padding: 8px;
+        }
+
+        .price {
+            list-style-type: none;
+            border: 1px solid #333;
+            margin: 0;
+            padding: 0;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            background-color: #444;
+        }
+
+        .price:hover {
+            box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        .price .header {
+            background-color: #551A8B;
+            color: white;
+            font-size: 25px;
+        }
+
+        .price li {
+            border-bottom: 1px solid #333;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            position: relative;
+            /* Add this */
+        }
+
+        /* Add this */
+        .price li.ticked::before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-color: #551A8B;
+            /* Purple */
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+        }
+
+        .price .grey {
+            background-color: #666;
+            font-size: 20px;
+        }
+
+        .button {
+            background: -webkit-linear-gradient(right, #003366, #004080, #0059b3, #0073e6);
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            color: white;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+
+        }
+
+        /* Updated style for h2 */
+        h2 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Make the font size larger for "Free" and "$29 / Month" */
+        .price li:nth-child(2) {
+            font-size: 50px;
+        }
+
+        .powerful {
+            color: #00FF00;
+            /* Green */
+            font-weight: bold;
+        }
+
+        .approved {
+            color: #00FF00;
+            /* Green */
+            font-weight: bold;
+        }
+
+        .pricingcolumns {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer {
+            color: white;
+        }
+
+
+
+        .header a {
+            font-size: 18px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .columns {
+                width: 100%;
+            }
+        }
+
+        .header__button {
+            font-size: 14px;
+        }
+
+        /* Make the left child div responsive */
+        .left-div {
+            flex: 1;
+            padding: 10px;
+        }
+
+        /* Make the right child div responsive */
+        .right-div {
+            flex: 1;
+            padding: 10px;
+        }
+
+        /* Make the three divs inside the left div responsive */
+        .left-child-div,
+        .left-child-div2 {
+            font-size: 20px;
+        }
+
+        /* Make the container with the boxes responsive */
+        .container {
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .box h2 {
+            font-size: 20px;
+        }
+
+        .profile-image-box {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Make the footer responsive */
+        .footer {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Media queries for smaller screens */
+        @media only screen and (max-width: 768px) {
+            .parent {
+                flex-direction: column;
+            }
+
+            .left-div,
+            .right-div {
+                flex: 1;
+            }
+
+            .resume-image {
+                max-width: 100%;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .box {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .header__text {
+                font-size: 20px;
+            }
+
+            .header__button {
+                font-size: 14px;
+            }
+
+            .left-child-div,
+            .left-child-div2 {
+                font-size: 20px;
+            }
+
+            .box h2 {
+                font-size: 16px;
+            }
+
+            .profile-image-box {
+                width: 16px;
+                height: 16px;
+            }
+
+            .price li:nth-child(2) {
+                font-size: 30px;
+            }
+
+            .footer {
+                font-size: 12px;
+            }
+        }
+
+        /* Your existing CSS styles... */
+
+        /* Make the "Build Resume" button in pricing responsive */
+        .price .button {
+            font-size: 14px;
+            padding: 8px 15px;
+        }
+
+        /* Make the images in box2 responsive */
+        .profile-image-box2 {
+            width: 100%;
+            height: auto;
+            max-width: 150px;
+            /* Adjust the max-width as needed */
+        }
+
+        /* Media queries for smaller screens */
+        @media only screen and (max-width: 768px) {
+
+            /* Adjust the font size and padding for the "Build Resume" button in pricing */
+            .price .button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+
+            /* Adjust the max-width of the images in box2 */
+            .profile-image-box2 {
+                max-width: 100px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            /* Adjust the font size and padding for the "Build Resume" button in pricing */
+            .price .button {
+                font-size: 10px;
+                padding: 4px 8px;
+            }
+
+            /* Adjust the max-width of the images in box2 */
+            .profile-image-box2 {
+                max-width: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="index.html" class="header__text">Resume365</a>
+        <a href="loginform.html" class="header__button">Sign In</a>
+    </div>
+    <div class="parent">
+        <div class="left-div">
+            <h1 class="left-child-div">AI <span style="color: blue;">Resume</span> Builder,Unlock Your Career Potential
+                With Ease Powered By ChatGpt</h1>
+            <p style="font-size: 20px;" class="left-child-div">use professional field tested resume templates that
+                follow the exact resume rule employers look for. Easy to use and done with in minutes.Try now for free
+            </p>
+            <a href="resume.html" class="button left-child-div">Build Resume</a>
+        </div>
+        <div class="right-div">
+            <img class="resume-image" src="assets/cv.PNG" alt="Resume Image">
+        </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <h2><img  class="profile-image-box" src="assets/pic1.png" alt="Image">Themeable</h2>
+            <p>Provides a simple way to customize default themse,you can change colors,fonts,breakpoints and every thing
+                you need.</p>
+
+        </div>
+        <div class="box">
+            <h2><img  class="profile-image-box" src="assets/pic2.png" alt="Image">AI-Powered</h2>
+            <p>Ai powered instant content writing and editing.The AI writer understand best practices to help you create
+                more effective bullet points and summaries.</p>
+
+        </div>
+        <div class="box">
+            <h2><img  class="profile-image-box" src="assets/pic3.png" alt="Image">Customzize Layout</h2>
+            <p>Make the resume template truly your own.CUstomize the layout based on your experience level.</p>
+
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="box">
+            <h2><img class="profile-image-box"  src="assets/pic4.png" alt="Image">Pick A Template</h2>
+            <p>Don't sabotage your job search before it has even begun. Choose from our hand-crafted resume templates
+            </p>
+
+        </div>
+        <div class="box">
+            <h2><img  class="profile-image-box" src="assets/pic5.png" alt="Image">ATS- Friendly</h2>
+            <p>Our resume templates are ATS-friendly. It means your resume won't automatically be rejected because an
+                ATS can't read it.</p>
+
+        </div>
+        <div class="box">
+            <h2><img  class="profile-image-box" src="assets/pic6.png" alt="Image">Download</h2>
+            <p>Start impressing employers. Download your awesome resume in pdf and land the job you are looking for,
+                effortlessly.</p>
+
+        </div>
+    </div>
+    <div class="parent">
+        <div class="left-div">
+            <h1 class="left-child-div2">Make the <span style="color: blue;">Resume</span> the way you want</h1>
+            <p style="font-size: 20px;" class="left-child-div">
+                Resume 365 provides a simple way to make & customize the Resume along with different themes, you can
+                change the colors, fonts and everything you need.
+            </p>
+            <div class="container2">
+                <div class="box2">
+                    <img class="profile-image-box2" src="assets/pic7.png" alt="Image">
+                </div>
+                <div class="box2">
+                    <img class="profile-image-box2" src="assets/pic8.png" alt="Image">
+                </div>
+                <div class="box2">
+                    <img  class="profile-image-box2" src="assets/pic9.png" alt="Image">
+                </div>
+            </div>
+        </div>
+        <div class="right-div">
+            <img class="resume-image" src="assets/cv2.PNG" alt="Resume Image">
+        </div>
+    </div>
+    <!-- Pricing section -->
+    <div class="pricing">
+        <h2>Build a Strikingly <span class="powerful">powerful</span> resume <span class="approved">approved</span> by
+            recruiters</h2>
+        <div class="pricingcolumns">
+            <div class="columns">
+                <ul class="price">
+                    <li class="headerprice">
+                        <h1>Basic Plan</h1>
+                    </li>
+                    </li>
+                    <li>Free</li>
+                    <li class="ticked">1 Resume Limited</li>
+                    <li class="ticked">Standard Format</li>
+                    <li class="ticked">PDF Download</li>
+                    <li class="ticked">AI Generation</li>
+                    <li><a href="resume.html" class="button">Build Resume</a></li>
+                </ul>
+            </div>
+
+            <div class="columns">
+                <ul class="price">
+                    <li class="headerprice">
+                        <h1>Pro Plan</h1>
+                    </li>
+                    <li>$29 / Month</li>
+                    <li class="ticked">Unlimited Resumes</li>
+                    <li class="ticked">AI Summary Writer</li>
+                    <li class="ticked">Unlimited PDF Download</li>
+                    <li class="ticked">Unlimited AI Generation</li>
+                    <li><a href="resume.html" class="button">Build Resume</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <h1>Resume365</h1>
+        <p>
+            @ 2023 Resume 365 All RightsReserved! </p>
+    </div>
+
+</body>
+
+</html>

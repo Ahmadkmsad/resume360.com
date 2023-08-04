@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resume365</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+
+        .content {
+            width: 80%;
+            padding: 20px;
+            margin: 0 10%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .nav-bar {
+            width: 20%;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-bar li {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+
+
+        .hidden {
+            display: none;
+        }
+
+        /* Form styles */
+        form {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #555;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            background-color: #444;
+            border: none;
+            color: #fff;
+        }
+
+        textarea {
+
+            width: 100%;
+            height: 100px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            cursor: pointer;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .add-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .add-button:hover {
+            background-color: #0056b3;
+        }
+
+        .profile-heading {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .profile-heading h2 {
+            margin: 0;
+        }
+
+        .profile-fields {
+            display: grid;
+            grid-template-columns: 0.2fr 0.8fr;
+            /* Two columns with equal width */
+
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-image-container {
+            grid-column: 1;
+            /* First column */
+
+        }
+
+        .name-dob-container {
+            grid-column: 2;
+            /* Second column */
+
+        }
+
+        .profile-fields input {
+            width: 100%;
+            /* Make the input fields take the full width of their container */
+        }
+
+        .profile-image2 {
+            width: 60%;
+
+        }
+
+
+        .profile-image-nav {
+            width: 30px;
+            /* Set the desired width for the images */
+            height: 30px;
+            /* Set the desired height for the images */
+            margin-right: 5px;
+            vertical-align: middle;
+            /* Align the images vertically with the text */
+        }
+
+        .header__text {
+
+            color: white;
+
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .left-button {
+            flex: 1;
+            
+            
+        }
+        
+        .left-button button{
+           color: white;
+           background-color: #007bff;
+            
+            
+        }
+        
+
+        .center-buttons {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            gap: 10px;
+        }
+        .center-buttons a{
+            color: white;
+           background-color: #007bff;
+        }
+
+        .right-button {
+            flex: 1;
+            text-align: right;
+        }
+        .right-button a{
+            color: white;
+           background-color: #007bff;
+        }
+
+        button,
+        .button-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+            color: #333;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        button img,
+        .button-link img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        button:hover,
+        .button-link:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html" class="header__text">Resume 365</a>
+            <ul>
+
+                <li data-content="basics"><img class="profile-image-nav" src="assets/img1.PNG"
+                        alt="Profile Image">Basics</li>
+                <li data-content="location"><img class="profile-image-nav" src="assets/img2.PNG"
+                        alt="Profile Image">Location</li>
+                <li data-content="profiles"><img class="profile-image-nav" src="assets/img3.PNG"
+                        alt="Profile Image">Profiles</li>
+                <li data-content="work-experience"><img class="profile-image-nav" src="assets/img4.PNG"
+                        alt="Profile Image">Work Experience</li>
+                <li data-content="education"><img class="profile-image-nav" src="assets/img5.PNG"
+                        alt="Profile Image">Education</li>
+                <li data-content="awards"><img class="profile-image-nav" src="assets/img6.PNG"
+                        alt="Profile Image">Awards</li>
+                <li data-content="certifications"><img class="profile-image-nav" src="assets/img7.PNG"
+                        alt="Profile Image">Certifications</li>
+                <li data-content="publications"><img class="profile-image-nav" src="assets/img8.PNG"
+                        alt="Profile Image">Publications</li>
+                <li data-content="skills"><img class="profile-image-nav" src="assets/img9.PNG"
+                        alt="Profile Image">Skills</li>
+                <li data-content="languages"><img class="profile-image-nav" src="assets/img10.PNG"
+                        alt="Profile Image">Languages</li>
+                <li data-content="interests"><img class="profile-image-nav" src="assets/img11.PNG"
+                        alt="Profile Image">Interests</li>
+                <li data-content="volunteer"><img class="profile-image-nav" src="assets/img12.PNG"
+                        alt="Profile Image">Volunteer</li>
+                <li data-content="projects"><img class="profile-image-nav" src="assets/img13.PNG"
+                        alt="Profile Image">Projects</li>
+                <li data-content="references"><img class="profile-image-nav" src="assets/img14.PNG"
+                        alt="Profile Image">References</li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="button-container">
+                <div class="left-button">
+                    <button>
+                    
+                        Download
+                    </button>
+                </div>
+                <div class="center-buttons">
+                    <a href="resume.html" class="button-link">
+                       
+                        customize
+                    </a>
+                    <a href="content.html" class="button-link">
+                        
+                        Content
+                    </a>
+                </div>
+                <div class="right-button">
+                    <a href="upgrade.html" class="button-link">
+                       
+                        Upgrade
+                    </a>
+                </div>
+            </div>
+
+
+            <div id="basics" class="">
+                <div class="profile-heading">
+                    <img class="profile-image" src="assets/basic.PNG" alt="Profile Image">
+                    <h2>Basics</h2>
+                </div>
+                <div class="form">
+                    <div class="profile-fields">
+                        <div class="profile-image-container" id="profileImageContainer">
+                            <div class="rectangle"></div>
+                            <img class="profile-image2" src="assets/formimage.PNG" alt="Profile Image">
+                        </div>
+
+                        <div class="name-dob-container">
+                            <input type="text" id="name" placeholder="Your name" required>
+                            <input type="date" id="dob" required>
+                        </div>
+                    </div>
+                    <input type="email" id="email" placeholder="Your email" required>
+                    <input type="tel" id="phone" placeholder="Your phone number" required>
+                    <input type="url" id="website" placeholder="Your website URL">
+                    <label for="role">Role at Previous Company:</label>
+                    <input type="text" id="role" placeholder="Your role">
+                    <label for="description">What did you do at the company?</label>
+                    <textarea id="description" placeholder="Your responsibilities and achievements"></textarea>
+                </div>
+            </div>
+            <div id="location" class="hidden">
+                <h2>Location</h2>
+                <!-- Your form for Location module goes here -->
+                <input type="text" placeholder="City">
+                <input type="text" placeholder="Country">
+            </div>
+            <div id="profiles" class="hidden">
+                <h2>Profiles</h2>
+                <!-- Your form for Profiles module goes here -->
+                <input type="text" placeholder="LinkedIn">
+                <input type="text" placeholder="GitHub">
+
+            </div>
+            <div id="work-experience" class="hidden">
+                <h2>Work Experience</h2>
+                <!-- Your form for Work Experience module goes here -->
+                <input type="text" placeholder="Company">
+                <input type="text" placeholder="Position">
+
+            </div>
+            <div id="education" class="hidden">
+                <h2>Education</h2>
+                <!-- Your form for Education module goes here -->
+                <input type="text" placeholder="University">
+                <input type="text" placeholder="Degree">
+
+            </div>
+            <div id="awards" class="hidden">
+                <h2>Awards</h2>
+                <!-- Your form for Awards module goes here -->
+                <input type="text" placeholder="Award Name">
+                <input type="text" placeholder="Year">
+
+            </div>
+            <div id="certifications" class="hidden">
+                <h2>Certifications</h2>
+                <!-- Your form for Certifications module goes here -->
+                <input type="text" placeholder="Certification Name">
+                <input type="text" placeholder="Provider">
+
+            </div>
+            <div id="publications" class="hidden">
+                <h2>Publications</h2>
+                <!-- Your form for Publications module goes here -->
+                <input type="text" placeholder="Publication Title">
+                <input type="text" placeholder="Year">
+
+            </div>
+            <div id="skills" class="hidden">
+                <h2>Skills</h2>
+                <!-- Your form for Skills module goes here -->
+                <input type="text" placeholder="Skill 1">
+                <input type="text" placeholder="Skill 2">
+
+            </div>
+            <div id="languages" class="hidden">
+                <h2>Languages</h2>
+                <!-- Your form for Languages module goes here -->
+                <input type="text" placeholder="Language 1">
+                <input type="text" placeholder="Language 2">
+
+            </div>
+            <div id="interests" class="hidden">
+                <h2>Interests</h2>
+                <!-- Your form for Interests module goes here -->
+                <input type="text" placeholder="Interest 1">
+                <input type="text" placeholder="Interest 2">
+
+            </div>
+            <div id="volunteer" class="hidden">
+                <h2>Volunteer</h2>
+                <!-- Your form for Volunteer module goes here -->
+                <input type="text" placeholder="Organization">
+                <input type="text" placeholder="Role">
+
+            </div>
+            <div id="projects" class="hidden">
+                <h2>Projects</h2>
+                <!-- Your form for Projects module goes here -->
+                <input type="text" placeholder="Project Name">
+                <input type="text" placeholder="Description">
+
+            </div>
+            <div id="references" class="hidden">
+                <img class="profile-image" src="assets/img14.PNG" alt="Profile Image">
+                <h2>References</h2>
+                <!-- Your form for References module goes here -->
+                <input type="text" placeholder="Reference Name">
+                <input type="text" placeholder="Position">
+
+            </div>
+        </div>
+
+        <script>
+
+
+            function hideAllContentDivs() {
+                const contentDivs = document.querySelectorAll('.content > div');
+                contentDivs.forEach(div => div.classList.add('hidden'));
+            }
+
+            function showDefaultSection() {
+                const defaultSection = document.getElementById('basics');
+                defaultSection.classList.remove('hidden');
+            }
+
+            const navItems = document.querySelectorAll('.nav-bar li');
+
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    hideAllContentDivs();
+                    const contentId = item.getAttribute('data-content');
+                    const selectedSection = document.getElementById(contentId);
+                    selectedSection.classList.remove('hidden');
+                });
+            });
+
+            // Show the "Basics" section by default when the page loads
+            showDefaultSection();
+
+            const profileImageContainer = document.getElementById("profileImageContainer");
+
+            // Function to handle image selection and display
+            function handleImageSelection(event) {
+                const fileInput = document.createElement("input");
+                fileInput.type = "file";
+                fileInput.accept = "image/*";
+
+                // Trigger the file input when clicked on the container
+                fileInput.addEventListener("change", (event) => {
+                    const file = event.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = (e) => {
+                            // Create an image element to display the selected image
+                            const img = document.createElement("img");
+                            img.src = e.target.result;
+                            img.alt = "Profile Image";
+                            img.className = "profile-image2";
+
+                            // Replace the existing image with the selected image
+                            const existingImage = profileImageContainer.querySelector(".profile-image2");
+                            if (existingImage) {
+                                profileImageContainer.removeChild(existingImage);
+                            }
+                            profileImageContainer.appendChild(img);
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                });
+
+                fileInput.click();
+            }
+
+            // Attach the click event handler to the container
+            profileImageContainer.addEventListener("click", handleImageSelection);
+        </script>
+
+
+
+
+
+</body>
+
+</html>

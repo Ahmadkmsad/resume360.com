@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Resume365</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+
+        .content {
+            width: 80%;
+            padding: 20px;
+            margin: 0 10%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .nav-bar {
+            width: 20%;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .nav-bar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-bar li {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+
+
+        .hidden {
+            display: none;
+        }
+
+        /* Form styles */
+        form {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #555;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            background-color: #444;
+            border: none;
+            color: #fff;
+        }
+
+        textarea {
+
+            width: 100%;
+            height: 100px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            cursor: pointer;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .add-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .add-button:hover {
+            background-color: #0056b3;
+        }
+
+        .profile-heading {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .profile-heading h2 {
+            margin: 0;
+        }
+
+        .profile-fields {
+            display: grid;
+            grid-template-columns: 0.2fr 0.8fr;
+            /* Two columns with equal width */
+
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-image-container {
+            grid-column: 1;
+            /* First column */
+
+        }
+
+        .name-dob-container {
+            grid-column: 2;
+            /* Second column */
+
+        }
+
+        .profile-fields input {
+            width: 100%;
+            /* Make the input fields take the full width of their container */
+        }
+
+        .profile-image2 {
+            width: 60%;
+
+        }
+
+
+        .profile-image-nav {
+            width: 30px;
+            /* Set the desired width for the images */
+            height: 30px;
+            /* Set the desired height for the images */
+            margin-right: 5px;
+            vertical-align: middle;
+            /* Align the images vertically with the text */
+        }
+
+        .header__text {
+
+            color: white;
+
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .left-button {
+            flex: 1;
+            
+            
+        }
+        
+        .left-button button{
+           color: white;
+           background-color: #007bff;
+            
+            
+        }
+        .center-buttons {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .center-buttons a{
+            color: white;
+           background-color: #007bff;
+        }
+
+        .right-button {
+            flex: 1;
+            text-align: right;
+        }
+        .right-button a{
+            color: white;
+           background-color: #007bff;
+        }
+       #education{
+
+        margin-top: 5%;
+       }
+        button,
+        .button-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+            color: #333;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+        }
+
+        button img,
+        .button-link img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        button:hover,
+        .button-link:hover {
+            background-color: #e0e0e0;
+        }
+        .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+
+
+
+
+
+
+.fa-yahoo {
+  background: #430297;
+  color: white;
+}
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html" class="header__text">Resume 365</a>
+            <ul>
+
+                <li data-content="basics"><img class="profile-image-nav" src="assets/img15.PNG"
+                        alt="Profile Image">Templates</li>
+                <li data-content="location"><img class="profile-image-nav" src="assets/img16.PNG"
+                        alt="Profile Image">Layout</li>
+                <li data-content="profiles"><img class="profile-image-nav" src="assets/img17.PNG"
+                        alt="Profile Image">Typography</li>
+                <li data-content="work-experience"><img class="profile-image-nav" src="assets/img18.PNG"
+                        alt="Profile Image">Themes</li>
+                <li data-content="education"><img class="profile-image-nav" src="assets/img19.PNG"
+                        alt="Profile Image">Sharing</li>
+                <li data-content="awards"><img class="profile-image-nav" src="assets/img20.PNG"
+                        alt="Profile Image">Settings</li>
+               
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="button-container">
+                <div class="left-button">
+                    <button>
+                       
+                        Download
+                    </button>
+                </div>
+                <div class="center-buttons">
+                    <a href="resume.html" class="button-link">
+                       
+                        customize
+                    </a>
+                    <a href="content.html" class="button-link">
+                        
+                        Content
+                    </a>
+                </div>
+                <div class="right-button">
+                    <a href="upgrade.html" class="button-link">
+                      
+                        Upgrade
+                    </a>
+                </div>
+            </div>
+
+
+            <div id="basics" class="">
+                
+               
+            </div>
+            <div id="location" class="hidden">
+                
+            </div>
+            <div id="profiles" class="hidden">
+               
+
+            </div>
+            <div id="work-experience" class="hidden">
+               
+
+            </div>
+            <div id="education" class="hidden">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-pinterest"></a>
+             
+                <a href="#" class="fa fa-skype"></a>
+              
+                <a href="#" class="fa fa-yahoo"></a>
+           
+
+            </div>
+            <div id="awards" class="hidden">
+               
+
+            </div>
+            
+          
+          
+         
+        </div>
+
+        <script>
+
+
+            function hideAllContentDivs() {
+                const contentDivs = document.querySelectorAll('.content > div');
+                contentDivs.forEach(div => div.classList.add('hidden'));
+            }
+
+            function showDefaultSection() {
+                const defaultSection = document.getElementById('basics');
+                defaultSection.classList.remove('hidden');
+            }
+
+            const navItems = document.querySelectorAll('.nav-bar li');
+
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    hideAllContentDivs();
+                    const contentId = item.getAttribute('data-content');
+                    const selectedSection = document.getElementById(contentId);
+                    selectedSection.classList.remove('hidden');
+                });
+            });
+
+            // Show the "Basics" section by default when the page loads
+            showDefaultSection();
+
+            
+        </script>
+
+
+
+
+
+</body>
+
+</html>
